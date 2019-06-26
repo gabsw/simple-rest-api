@@ -1,0 +1,4 @@
+git status
+git add --all
+git commit -m "message" # or, if your message is long: git commit
+git push origin

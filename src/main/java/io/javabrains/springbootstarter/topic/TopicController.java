@@ -11,9 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TopicController {
-	
+	// spring recommends using injection through constructors
+	// if that is not possible, then through setters
 	@Autowired
 	private TopicService topicService;
+
+	// @...... (cant remember the annotation, look for "spring constructor injection"
+	// public TopicController(TopicService topicService) {
+	// 	this.topicService = topicService;
+	// }
 	
 	@RequestMapping("/topics")
 	public List<Topic> getAllTopics() {
